@@ -1,0 +1,52 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// Serve all files from 'public' folder
+app.use(express.static('public'));
+
+// Define routes
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/bussiness analaysis.html');
+});
+
+app.get('/certificate', (req, res) => {
+  res.sendFile(__dirname + '/public/certificate.html');
+});
+
+app.get('/data science', (req, res) => {
+  res.sendFile(__dirname + '/public/data science.html');
+});
+
+// Add routes for other pages
+app.get('/digital marketing', (req, res) => {
+  res.sendFile(__dirname + '/public/digital marketing.html');
+});
+
+app.get('/homepage', (req, res) => {
+    res.sendFile(__dirname + '/public/homepage.html');
+});
+
+app.get('/loginpage', (req, res) => {
+    res.sendFile(__dirname + '/public/loginpage.html');
+  });
+
+app.get('/popularcourses', (req, res) => {
+    res.sendFile(__dirname + '/public/popularcourses.html');
+  });
+
+app.get('/python basics', (req, res) => {
+    res.sendFile(__dirname + '/public/python basics.html');
+  });
+
+app.get('/signup page', (req, res) => {
+    res.sendFile(__dirname + '/public/signup page.html');
+  });
+app.get('/web development', (req, res) => {
+    res.sendFile(__dirname + '/public/web development.html');
+  });
+// Similarly for page2, page3, etc.
+
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});

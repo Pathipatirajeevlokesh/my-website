@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+        .courses-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .course-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .course-card img {
+            width: 100px;
+            height: 100px;
+        }
+        .course-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .course-description {
+            font-size: 14px;
+            color: gray;
+            margin: 10px 0;
+        }
+        .enroll-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .enroll-button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h3>Filter by</h3>
+        <div>
+            <h4>Level</h4>
+            <label><input type="checkbox"> Advanced</label><br>
+            <label><input type="checkbox"> Intermediate</label><br>
+            <label><input type="checkbox"> Beginner</label>
+        </div>
+        <div>
+            <h4>Duration</h4>
+            <label><input type="checkbox"> < 30 mins</label><br>
+            <label><input type="checkbox"> 30 - 60 mins</label><br>
+            <label><input type="checkbox"> 1 - 2 hours</label><br>
+            <label><input type="checkbox"> 2 - 5 hours</label><br>
+            <label><input type="checkbox"> 5 - 10 hours</label><br>
+            <label><input type="checkbox"> 10+ hours</label>
+        </div>
+        <div>
+            <h4>Language</h4>
+            <label><input type="checkbox"> English</label><br>
+            <label><input type="checkbox"> Spanish</label><br>
+            <label><input type="checkbox"> French</label><br>
+            <label><input type="checkbox"> German</label>
+        </div>
+    </div>
+    <div>
+        <h2>Popular Courses</h2>
+        <div class="courses-container">
+            <div class="course-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSRkBYfRhSwuXbO6bHlkxSdLoa5ShkgjxO_A&s" alt="Data Science Image">
+                <div class="course-title">Introduction to Data Science</div>
+                <div class="course-description">Learn the fundamentals of data science in 6 weeks.</div>
+                <button class="enroll-button" onclick="location.href='data science.html'">Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGU09ugC8nqOLoXnAR1_KUtyUgYjbwXJLeJg&s" alt="Web Development Image">
+                <div class="course-title">Web Development Bootcamp</div>
+                <div class="course-description">Master full-stack web development with hands-on projects.</div>
+                <button class="enroll-button" onclick="location.href='web development.html'">Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJKVPSpPVkPeWJa3oODq7A1i5oD19WwEjxgA&s" alt="Digital Marketing Image">
+                <div class="course-title">Digital Marketing 101</div>
+                <div class="course-description">Learn how to grow your business online.</div>
+                <button class="enroll-button" onclick="location.href='digital marketing.html'">Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyA36iNOhbgCuOUu8sfwzl56jBbMP4nTV4Hg&s" alt="Business Analysis Image">
+                <div class="course-title">Business Analysis & Process Management</div>
+                <div class="course-description">Develop analytical skills to optimize business processes.</div>
+                <button class="enroll-button" onclick="location.href='bussiness analaysis.html'">Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy-XA60eguTg4T4JIQz52bdFE_A1h2AalqxQ&s" alt="Business Analysis Image">
+                <div class="course-title">Business Analysis & Process Management</div>
+                <div class="course-description">Understand business needs and drive process improvements.</div>
+                <button class="enroll-button" onclick="location.href='bussiness analaysis.html'">Enroll Now</button>
+            </div>
+            <div class="course-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtdRsbNblY-trvVBgVFHyP_g2Lrz9dLP3k7Q&s" alt="Python Basics Image">
+                <div class="course-title">Python Basics</div>
+                <div class="course-description">Learn Python programming from scratch.</div>
+                <button class="enroll-button" onclick="location.href='python basics.html'">Enroll Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

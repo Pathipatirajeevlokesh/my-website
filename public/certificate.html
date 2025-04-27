@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .certificate-list {
+            list-style: none;
+            padding: 0;
+        }
+        .certificate-item {
+            background: #e3f2fd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .download-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .download-button:hover {
+            background: #0056b3;
+        }
+        .verify-section {
+            margin-top: 30px;
+            padding: 15px;
+            background: #fff3cd;
+            border-radius: 5px;
+        }
+        .verify-section input {
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .verify-button {
+            background: green;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Your Earned Certificates</h2>
+        <input type="text" class="search-box" placeholder="Search your certificates...">
+        <ul class="certificate-list">
+            <li class="certificate-item">
+                <span>Introduction to Data Science</span>
+                <button class="download-button">Download</button>
+            </li>
+            <li class="certificate-item">
+                <span>Web Development Bootcamp</span>
+                <button class="download-button">Download</button>
+            </li>
+            <li class="certificate-item">
+                <span>Python Basics</span>
+                <button class="download-button">Download</button>
+            </li>
+			<li class="certificate-item">
+                <span>Digital Marketing</span>
+                <button class="download-button">Download</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

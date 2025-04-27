@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1527685216219-c7bee79b0089?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background: white; 
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .toggle-buttons {
+            display: flex;
+            justify-content: space-between;
+            background: #add8e6; 
+            border-radius: 25px;
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+        .toggle-buttons button {
+            flex: 1;
+            border: none;
+            padding: 12px;
+            border-radius: 25px;
+            background: transparent;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .toggle-buttons .active {
+            background: #007bff;
+            color: white;
+        }
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: none;
+        }
+        .login-button {
+            width: 100%;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .login-button:hover {
+            background: #0056b3;
+        }
+        .signup-link {
+            margin-top: 12px;
+            font-size: 14px;
+        }
+        .signup-link a {
+            color: #007bff; 
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/020/617/514/small/apc-letter-logo-design-in-illustration-logo-calligraphy-designs-for-logo-poster-invitation-etc-vector.jpg" alt="Logo" class="logo">
+        <h2 id="login-title">Login as a Student</h2>
+        <div class="toggle-buttons">
+            <button id="student-btn" class="active" onclick="toggleRole('Student')">Student</button>
+            <button id="teacher-btn" onclick="toggleRole('Teacher')">Teacher</button>
+        </div>
+        <p class="error-message" id="error-message">Please enter a valid email and password.</p>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button class="login-button" onclick="validateLogin()">Login</button>
+        <div class="signup-link">
+            Don't have an account? <a href="#">Sign up</a>
+        </div>
+    </div>
+    
+    <script>
+        function toggleRole(role) {
+            document.getElementById("login-title").innerText = "Login as a " + role;
+            document.getElementById("student-btn").classList.toggle("active", role === "Student");
+            document.getElementById("teacher-btn").classList.toggle("active", role === "Teacher");
+        }
+
+        function validateLogin() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var errorMessage = document.getElementById("error-message");
+            
+            if (email === "" || password === "") {
+                errorMessage.innerText = "Please enter both email and password.";
+                errorMessage.style.display = "block";
+            } else if (!email.includes("@")) {
+                errorMessage.innerText = "Please enter a valid email with '@'.";
+                errorMessage.style.display = "block";
+            } else {
+                errorMessage.style.display = "none";
+                alert("Login successful!");
+                window.location.href = 'popularcourses.html';
+            }
+        }
+    </script>
+</body>
+</html>
